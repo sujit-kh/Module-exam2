@@ -1,0 +1,1206 @@
+/////**********Collection Assignment*******/////
+#####ArrayList Exeercises.....
+/*1.Write a Java program to create a new array list, add some elements (string) and print out the collection.
+--->>package com.deven;
+import java.util.ArrayList;
+public class Arrayc1 {
+    public static void main(String [] args) {
+        ArrayList<String> color = new ArrayList<String>();
+        color.add("Green");
+        color.add("Yellow");
+        color.add("Black");
+        color.add("Red");
+        System.out.print(color);
+    }
+}
+----------------------------------------------------------------------------------
+/*2.Write a Java program to insert an element into the array list at the first position.
+--->>import java.util.*;
+  public class Exercise3 {
+  public static void main(String[] args) {
+  // Creae a list and add some colors to the list
+  List<String> list_Strings = new ArrayList<String>();
+  list_Strings.add("Red");
+  list_Strings.add("Green");
+  list_Strings.add("Orange");
+  list_Strings.add("White");
+  list_Strings.add("Black");
+  // Print the list
+  System.out.println(list_Strings);
+  // Now insert a color at the first and last position of the list
+  list_Strings.add(0, "Pink");
+  list_Strings.add(5, "Yellow");
+  // Print the list
+  System.out.println(list_Strings);
+ }
+}
+-----------------------------------------------------------------------------------
+/*3.Write a Java program to retrieve an element (at a specified index) from a given array list.
+--->>import java.util.*;
+  public class Exercise4 {
+  public static void main(String[] args) {
+  // Creae a list and add some colors to the list
+  List<String> list_Strings = new ArrayList<String>();
+  list_Strings.add("Red");
+  list_Strings.add("Green");
+  list_Strings.add("Orange");
+  list_Strings.add("White");
+  list_Strings.add("Black");
+  // Print the list
+  System.out.println(list_Strings);
+  // Retrive the first and third element
+  String element = list_Strings.get(0);
+  System.out.println("First element: "+element);
+  element = list_Strings.get(2);
+  System.out.println("Third element: "+element);
+ }
+}
+-----------------------------------------------------------------------------------
+/*4.Write a Java program to update specific array element by given element.
+--->>import java.util.*;
+  public class Exercise5 {
+  public static void main(String[] args) {
+  // Creae a list and add some colors to the list
+  List<String> list_Strings = new ArrayList<String>();
+  list_Strings.add("Red");
+  list_Strings.add("Green");
+  list_Strings.add("Orange");
+  list_Strings.add("White");
+  list_Strings.add("Black");
+  // Print the list
+  System.out.println(list_Strings);
+  // Update the third element with "Yellow"
+  list_Strings.set(2, "Yellow");
+   // Print the list again
+  System.out.println(list_Strings);
+ }
+}
+-----------------------------------------------------------------------------------
+/*5.Write a Java program to remove the third element from a array list.
+--->>import java.util.*;
+  public class Exercise6 {
+  public static void main(String[] args) {
+  // Creae a list and add some colors to the list
+  List<String> list_Strings = new ArrayList<String>();
+  list_Strings.add("Red");
+  list_Strings.add("Green");
+  list_Strings.add("Orange");
+  list_Strings.add("White");
+  list_Strings.add("Black");
+  // Print the list
+  System.out.println(list_Strings);
+  // Remove the third element from the list.
+  list_Strings.remove(2);
+  // Print the list again
+  System.out.println("After removing third element from the list:\n"+list_Strings);
+ }
+}
+---------------------------------------------------------------------------------
+/*6.Write a Java program to search an element in a array list.
+--->>import java.util.*;
+  public class Exercise7 {
+  public static void main(String[] args) {
+  // Creae a list and add some colors to the list
+  List<String> list_Strings = new ArrayList<String>();
+  list_Strings.add("Red");
+  list_Strings.add("Green");
+  list_Strings.add("Orange");
+  list_Strings.add("White");
+  list_Strings.add("Black");
+  // Search the value Red
+    if (list_Strings.contains("Red")) {
+    System.out.println("Found the element");
+    } else {
+    System.out.println("There is no such element");
+    }
+ }
+}
+---------------------------------------------------------------------------------
+/*7.Write a Java program to sort a given array list.
+--->>import java.util.*;
+  public class Exercise8 {
+  public static void main(String[] args) {
+  // Creae a list and add some colors to the list
+  List<String> list_Strings = new ArrayList<String>();
+  list_Strings.add("Red");
+  list_Strings.add("Green");
+  list_Strings.add("Orange");
+  list_Strings.add("White");
+  list_Strings.add("Black");
+  System.out.println("List before sort: "+list_Strings);
+  Collections.sort(list_Strings);
+  System.out.println("List after sort: "+list_Strings);    
+ }
+}
+----------------------------------------------------------------------------------
+/*8.Write a Java program to reverse elements in a array list.
+--->>import java.util.*;
+  public class Exercise11 {
+  public static void main(String[] args) {
+  // Creae a list and add some colors to the list
+  List<String> list_Strings = new ArrayList<String>();
+  list_Strings.add("Red");
+  list_Strings.add("Green");
+  list_Strings.add("Orange");
+  list_Strings.add("White");
+  list_Strings.add("Black");
+  System.out.println("List before reversing :\n" + list_Strings);  
+  Collections.reverse(list_Strings);
+  System.out.println("List after reversing :\n" + list_Strings); 
+ }
+}
+---------------------------------------------------------------------------------
+/*9.Write a Java program to empty an array list.
+--->>import java.util.ArrayList;
+import java.util.Collections;
+  public class Exercise17 {
+  public static void main(String[] args) {
+          ArrayList<String> c1= new ArrayList<String>();
+          c1.add("Red");
+          c1.add("Green");
+          c1.add("Black");
+          c1.add("White");
+          c1.add("Pink");
+          System.out.println("Original array list: " + c1);
+          c1.removeAll(c1);
+          System.out.println("Array list after remove all elements "+c1);   
+   }
+}
+--------------------------------------------------------------------------------
+///////////LinkedList*******//////
+/*1.Write a Java program to append the specified element to the end of a linked list.
+--->>import java.util.LinkedList;
+  public class Exercise1 {
+  public static void main(String[] args) {
+     // create an empty linked list
+     LinkedList<String> l_list = new LinkedList<String>();
+   // use add() method to add values in the linked list
+          l_list.add("Red");
+          l_list.add("Green");
+          l_list.add("Black");
+          l_list.add("White");
+          l_list.add("Pink");
+          l_list.add("Yellow");
+	
+   // print the list
+   System.out.println("The linked list: " + l_list);
+   }
+}
+---------------------------------------------------------------------------------
+/*2.Write a Java program to iterate through all elements in a linked list starting at the specified position.
+--->>import java.util.LinkedList;
+import java.util.Iterator;
+  public class Exercise3 {
+  public static void main(String[] args) {
+    // create an empty linked list
+     LinkedList<String> l_list = new LinkedList<String>();
+   // use add() method to add values in the linked list
+          l_list.add("Red");
+          l_list.add("Green");
+          l_list.add("Black");
+          l_list.add("White");
+          l_list.add("Pink");
+// set Iterator at specified index
+   Iterator p = l_list.listIterator(1);
+
+   // print list from second position
+   while (p.hasNext()) {
+   System.out.println(p.next());
+   }
+   }
+}
+---------------------------------------------------------------------------------
+/*3.Write a Java program to iterate a linked list in reverse order.
+--->>import java.util.LinkedList;
+import java.util.Iterator;
+  public class Exercise4 {
+  public static void main(String[] args) {
+    // create an empty linked list
+     LinkedList<String> l_list = new LinkedList<String>();
+   // use add() method to add values in the linked list
+          l_list.add("Red");
+          l_list.add("Green");
+          l_list.add("Black");
+          l_list.add("Pink");
+          l_list.add("orange");
+      
+        // print original list
+   System.out.println("Original linked list:" + l_list);  
+ 
+    Iterator it = l_list.descendingIterator();
+
+     // Print list elements in reverse order
+     System.out.println("Elements in Reverse Order:");
+     while (it.hasNext()) {
+        System.out.println(it.next());
+     }
+  }
+}
+--------------------------------------------------------------------------------
+/*4.Write a Java program to insert the specified element at the specified position in the linked list.
+--->>import java.util.LinkedList;
+public class Exercise5 {
+	public static void main(String[] args) {
+		// create an empty linked list
+		LinkedList <String> l_list = new LinkedList <String> ();
+		// use add() method to add values in the linked list
+		l_list.add("Red");
+		l_list.add("Green");
+		l_list.add("Black");
+		l_list.add("White");
+		l_list.add("Pink");
+		System.out.println("Original linked list: ");
+		System.out.println("Let add the Yellow color after the Red Color: " + l_list);
+		l_list.add(1, "Yellow");
+		// print the list
+		System.out.println("The linked list:" + l_list);
+	}
+}
+---------------------------------------------------------------------------------
+/*5.Write a Java program to insert elements into the linked list at the first and last position.
+--->>import java.util.LinkedList;
+  public class Exercise6 {
+  public static void main(String[] args) {
+   // create an empty linked list
+     LinkedList<String> l_list = new LinkedList<String>();
+   // use add() method to add values in the linked list
+          l_list.add("Red");
+          l_list.add("Green");
+          l_list.add("Black");
+     System.out.println("Original linked list:" + l_list);    
+   // Add an element at the beginning 
+    l_list.addFirst("White");
+ 
+   // Add an element at the end of list 
+    l_list.addLast("Pink");
+     System.out.println("Final linked list:" + l_list);  
+ }
+}
+---------------------------------------------------------------------------------
+/*6.Write a Java program to insert the specified element at the front of a linked list.
+--->>import java.util.LinkedList;
+  public class Exercise7 {
+  public static void main(String[] args) {
+   // create an empty linked list
+     LinkedList<String> l_list = new LinkedList<String>();
+   // use add() method to add values in the linked list
+          l_list.add("Red");
+          l_list.add("Green");
+          l_list.add("Black");
+     System.out.println("Original linked list:" + l_list);    
+  // Add an element to front of LinkedList
+     l_list.offerFirst("Pink");
+     System.out.println("Final linked list:" + l_list);  
+ }	
+}
+---------------------------------------------------------------------------------
+/*7.Write a Java program to insert some elements at the specified position into a linked list.
+--->>import java.util.LinkedList;
+public class Exercise9 {
+ public static void main(String[] args) {
+  // create an empty linked list
+  LinkedList <String> l_list = new LinkedList <String> ();
+  // use add() method to add values in the linked list
+  l_list.add("Red");
+  l_list.add("Green");
+  l_list.add("Black");
+
+  // print original list
+  System.out.println("Original linked list:" + l_list);
+
+  // create a new collection and add some elements
+
+  LinkedList <String> new_l_list = new LinkedList <String> ();
+  new_l_list.add("White");
+  new_l_list.add("Pink");
+
+  // Add the collection in the second position of the existing linked list
+  l_list.addAll(1, new_l_list);
+
+  // print the new list
+  System.out.println("LinkedList:" + l_list);
+ }
+}
+--------------------------------------------------------------------------------
+/*8.Write a Java program to get the first and last occurrence of the specified elements in a linked list.
+--->>import java.util.LinkedList;
+import java.util.Iterator;
+  public class Exercise10 {
+  public static void main(String[] args) {
+    // create an empty linked list
+     LinkedList<String> l_list = new LinkedList<String>();
+   // use add() method to add values in the linked list
+          l_list.add("Red");
+          l_list.add("Green");
+          l_list.add("Black");
+          l_list.add("Pink");
+          l_list.add("orange");
+      
+      // print original list
+   System.out.println("Original linked list:" + l_list);  
+ 
+   // Find first element of the List
+    Object first_element = l_list.getFirst();
+    System.out.println("First Element is: "+first_element);
+ 
+    // Find last element of the List
+    Object last_element = l_list.getLast();
+    System.out.println("Last Element is: "+last_element);
+ }
+}
+--------------------------------------------------------------------------------
+/*9.Write a Java program to remove first and last element from a linked list.
+--->>import java.util.*;
+
+  public class Exercise13 {
+  public static void main(String[] args) {
+    // create an empty linked list
+     LinkedList<String> l_list = new LinkedList<String>();
+   // use add() method to add values in the linked list
+          l_list.add("Red");
+          l_list.add("Green");
+          l_list.add("Black");
+          l_list.add("Pink");
+          l_list.add("orange");
+      
+     // print the list
+   System.out.println("The Original linked list: " + l_list);
+
+  // Remove the first element
+    Object firstElement = l_list.removeFirst();
+    System.out.println("Element removed: "+ firstElement);
+ 
+  // Remove the last element
+    Object lastElement = l_list.removeLast();
+    System.out.println("Element removed: "+ lastElement);
+    System.out.println("The New linked list: " + l_list);
+  }
+}
+-----------------------------------------------------------------------------------
+/*10.Write a Java program of swap two elements in a linked list.
+--->>import java.util.*;
+
+public class Exercise15 {
+ public static void main(String[] args) {
+  // create an empty linked list
+  LinkedList <String> l_list = new LinkedList <String> ();
+  // use add() method to add values in the linked list
+  l_list.add("Red");
+  l_list.add("Green");
+  l_list.add("Black");
+  l_list.add("Pink");
+  l_list.add("orange");
+  // print the list
+  System.out.println("The Original linked list: " + l_list);
+  
+   //Swapping 1st(index 0) element(Red) with the 3rd(index 2) element (Black)
+    Collections.swap(l_list, 0, 2);
+    System.out.println("The New linked list after swap: " + l_list);
+ }
+}
+-------------------------------------------------------------------------------------
+/*11.Write a Java program to join two linked lists.
+--->>import java.util.*;
+public class Exercise17 {
+ public static void main(String[] args) {
+  // create an empty linked list
+  LinkedList <String> c1 = new LinkedList <String> ();
+  
+          c1.add("Red");
+          c1.add("Green");
+          c1.add("Black");
+          c1.add("White");
+          c1.add("Pink");
+          System.out.println("List of first linked list: " + c1);
+         LinkedList <String> c2 = new LinkedList <String> ();
+          c2.add("Red");
+          c2.add("Green");
+          c2.add("Black");
+          c2.add("Pink");
+          System.out.println("List of second linked list: " + c2);
+        
+      // Let join above two list
+        LinkedList <String> a = new LinkedList <String> ();
+        a.addAll(c1);
+        a.addAll(c2);
+        System.out.println("New linked list: " + a);
+             }
+}
+------------------------------------------------------------------------------------
+/*12.Write a Java program to check if a particular element exists in a linked list.
+--->>import java.util.*;
+public class Exercise22 {
+ public static void main(String[] args) {
+  // create an empty linked list
+  LinkedList <String> c1 = new LinkedList <String> ();
+            c1.add("Red");
+          c1.add("Green");
+          c1.add("Black");
+          c1.add("White");
+          c1.add("Pink");
+          System.out.println("Original linked list: " + c1);
+           
+     // Checks whether the color "Green" exists or not.
+    if (c1.contains("Green")) {
+       System.out.println("Color Green is present in the linked list.");
+    } else {
+       System.out.println("Color Green is not present in the linked list.");
+     }
+    
+     // Checks whether the color "Orange" exists or not.
+    if (c1.contains("Orange")) {
+       System.out.println("Color Orange is present in the linked list.");
+    } else {
+       System.out.println("Color Orange is not present in the linked list.");
+     }
+    
+ }
+}
+-----------------------------------------------------------------------------------
+/*13.Write a Java program to convert a linked list to array list.
+--->>import java.util.*;
+
+public class Exercise23 {
+ public static void main(String[] args) {
+  // create an empty linked list
+  LinkedList <String> linked_list = new LinkedList <String> ();
+            linked_list.add("Red");
+          linked_list.add("Green");
+          linked_list.add("Black");
+          linked_list.add("White");
+          linked_list.add("Pink");
+          System.out.println("Original linked list: " + linked_list);
+   
+      //Convert a linked list to array list    
+     List<String> list = new ArrayList<String>(linked_list);
+
+    for (String str : list){
+      System.out.println(str);
+    }
+ }
+}
+----------------------------------------------------------------------------------
+/*14.Write a Java program to compare two linked lists.
+--->>import java.util.*;
+  public class Exercise24 {
+  public static void main(String[] args) {
+   LinkedList<String> c1= new LinkedList<String>();
+          c1.add("Red");
+          c1.add("Green");
+          c1.add("Black");
+          c1.add("White");
+          c1.add("Pink");
+
+          LinkedList<String> c2= new LinkedList<String>();
+          c2.add("Red");
+          c2.add("Green");
+          c2.add("Black");
+          c2.add("Orange");
+
+          //comparison output in linked list
+          LinkedList<String> c3 = new LinkedList<String>();
+          for (String e : c1)
+             c3.add(c2.contains(e) ? "Yes" : "No");
+          System.out.println(c3);         
+     }
+}
+----------------------------------------------------------------------------------
+/*15.Write a Java program to test an linked list is empty or not.
+--->>import java.util.LinkedList;
+import java.util.Collections;
+  public class Exercise25 {
+  public static void main(String[] args) {
+          LinkedList<String> c1= new LinkedList<String>();
+          c1.add("Red");
+          c1.add("Green");
+          c1.add("Black");
+          c1.add("White");
+          c1.add("Pink");
+          System.out.println("Original linked list: " + c1);
+          System.out.println("Check the above linked list is empty or not! "+c1.isEmpty());
+          c1.removeAll(c1);
+          System.out.println("Linked list after remove all elements "+c1);   
+          System.out.println("Check the above linked list is empty or not! "+c1.isEmpty());
+   }
+}
+----------------------------------------------------------------------------------
+/*16.Write a Java program to replace an element in a linked list.
+--->>import java.util.LinkedList;
+import java.util.Collections;
+  public class Exercise18 {
+  public static void main(String[] args) {
+          LinkedList<String> c1= new LinkedList<String>();
+          c1.add("Red");
+          c1.add("Green");
+          c1.add("Black");
+          c1.add("White");
+          c1.add("Pink");
+          System.out.println("Original linked list: " + c1);
+          // Replacing 2nd element with new value
+          c1.set(1, "Orange");
+          System.out.println("The value of second element changed.");
+          System.out.println("New linked list: " + c1);
+   }
+}
+---------------------------------------------------------------------------------
+////////////**********Hashset Exercise*******///////
+/*1.Write a Java program to append the specified element to the end of a
+hash set for Employee Id and Employee name.
+--->>import java.util.HashSet;
+  public class Exercise1 {
+  public static void main(String[] args) {
+     // Create a empty hash set
+     HashSet<String> h_set = new HashSet<String>();
+   // use add() method to add values in the hash set
+          h_set.add("Red");
+          h_set.add("Green");
+          h_set.add("Black");
+          h_set.add("White");
+          h_set.add("Pink");
+          h_set.add("Yellow");
+
+   // print the hash set
+   System.out.println("The Hash Set: " + h_set);
+   }
+}
+-------------------------------------------------------------------------------
+/*2.Write a Java program to get the number of elements in a hash set.
+--->>>import java.util.*;
+import java.util.Iterator;
+  public class Exercise3 {
+  public static void main(String[] args) {
+         // Create a empty hash set
+     HashSet<String> h_set = new HashSet<String>();
+   // use add() method to add values in the hash set
+          h_set.add("Red");
+          h_set.add("Green");
+          h_set.add("Black");
+          h_set.add("White");
+          h_set.add("Pink");
+          h_set.add("Yellow");
+    System.out.println("Original Hash Set: " + h_set);
+    System.out.println("Size of the Hash Set: " + h_set.size());
+   }
+}
+--------------------------------------------------------------------------------
+/*3.Write a Java program to convert a hash set to an array.
+--->>import java.util.*;
+  public class Exercise7 {
+  public static void main(String[] args) {
+         // Create a empty hash set
+     HashSet<String> h_set = new HashSet<String>();
+   // use add() method to add values in the hash set
+          h_set.add("Red");
+          h_set.add("Green");
+          h_set.add("Black");
+          h_set.add("White");
+          h_set.add("Pink");
+          h_set.add("Yellow");
+      System.out.println("Original Hash Set: " + h_set);
+      // Creating an Array
+      String[] new_array = new String[h_set.size()];
+      h_set.toArray(new_array);
+ 
+     // Displaying Array elements
+     System.out.println("Array elements: ");
+      for(String element : new_array){
+        System.out.println(element);
+     }
+   }
+}
+--------------------------------------------------------------------------------
+/*4.Write a Java program to convert a hash set to a tree set.
+--->>import java.util.*;
+  public class Exercise8 {
+  public static void main(String[] args) {
+         // Create a empty hash set
+     HashSet<String> h_set = new HashSet<String>();
+   // use add() method to add values in the hash set
+          h_set.add("Red");
+          h_set.add("Green");
+          h_set.add("Black");
+          h_set.add("White");
+          h_set.add("Pink");
+          h_set.add("Yellow");
+      System.out.println("Original Hash Set: " + h_set);
+    
+     // Creat a TreeSet of HashSet elements
+     Set<String> tree_set = new TreeSet<String>(h_set);
+ 
+     // Display TreeSet elements
+     System.out.println("TreeSet elements: ");
+     for(String element : tree_set){
+        System.out.println(element);
+     }
+  }
+}
+-------------------------------------------------------------------------------
+/*5.Write a Java program to convert a hash set to a List/ArrayList.
+import java.util.*;
+  public class Exercise8 {
+  public static void main(String[] args) {
+         // Create a empty hash set
+     HashSet<String> h_set = new HashSet<String>();
+   // use add() method to add values in the hash set
+          h_set.add("Red");
+          h_set.add("Green");
+          h_set.add("Black");
+          h_set.add("White");
+          h_set.add("Pink");
+          h_set.add("Yellow");
+      System.out.println("Original Hash Set: " + h_set);
+    
+     // Creat a TreeSet of HashSet elements
+     Set<String> tree_set = new TreeSet<String>(h_set);
+ 
+     // Display TreeSet elements
+     System.out.println("TreeSet elements: ");
+     for(String element : tree_set){
+        System.out.println(element);
+     }
+  }
+}
+--------------------------------------------------------------------------------
+/*6.Write a Java program to remove all of the elements from a hash set.
+--->>import java.util.*;
+  public class Exercise12 {
+  public static void main(String[] args) {
+     // Create a empty hash set
+        HashSet<String> h_set = new HashSet<String>();
+     // use add() method to add values in the hash set
+          h_set.add("Red");
+          h_set.add("Green");
+          h_set.add("Black");
+          h_set.add("White");
+           System.out.println("Original hash set contains: "+ h_set);
+      //  clear() method removes all the elements from a hash set
+      // and the set becomes empty.
+          h_set.clear();
+ 
+     // Display original hash set content again
+          System.out.println("HashSet content: "+h_set);
+     }
+}
+--------------------------------------------------------------------------------
+/////////////Tree Set******************///////////////////
+/*1.write a Java Program to create a new tree set add some colours string and print out the tree set
+--->>import java.util.TreeSet;
+public class Exercise1 {
+  public static void main(String[] args) {
+  TreeSet<String> tree_set = new TreeSet<String>();
+  tree_set.add("Red");
+  tree_set.add("Green");
+  tree_set.add("Orange");
+  tree_set.add("White");
+  tree_set.add("Black");
+  System.out.println("Tree set: ");
+  System.out.println(tree_set);
+ }
+}
+-------------------------------------------------------------------------------
+/*2.Write a Java program to iterate through all elements in a tree set.
+--->>import java.util.TreeSet;
+public class Exercise2 {
+  public static void main(String[] args) {
+  TreeSet<String> tree_set = new TreeSet<String>();
+  tree_set.add("Red");
+  tree_set.add("Green");
+  tree_set.add("Orange");
+  tree_set.add("White");
+  tree_set.add("Black");
+  // Print the tree list
+  for (String element : tree_set) {
+    System.out.println(element);
+    }
+ }
+}
+--------------------------------------------------------------------------------
+/*3.Write a Java program to add all the elements of a specified tree set to another tree set.
+--->>import java.util.TreeSet;
+public class Exercise3 {
+  public static void main(String[] args) {
+  TreeSet<String> tree_set1 = new TreeSet<String>();
+  tree_set1.add("Red");
+  tree_set1.add("Green");
+  tree_set1.add("Orange");
+  System.out.println("Tree set1: "+tree_set1);
+  TreeSet<String> tree_set2 = new TreeSet<String>();
+  tree_set2.add("Pink");
+  tree_set2.add("White");
+  tree_set2.add("Black");
+  System.out.println("Tree set2: "+tree_set2);
+   // adding treetwo to treeone
+   tree_set1.addAll(tree_set2);
+   System.out.println("Tree set1: "+tree_set1);
+ }
+}
+---------------------------------------------------------------------------------
+/*4.Write a Java program to create a reverse order view of the elements contained in a given tree set.
+--->>import java.util.TreeSet;
+import java.util.Iterator;
+  public class Exercise4 {
+  public static void main(String[] args) {
+    // create an empty tree set
+     TreeSet<String> t_set = new TreeSet<String>();
+   // use add() method to add values in the tree set
+          t_set.add("Red");
+          t_set.add("Green");
+          t_set.add("Black");
+          t_set.add("Pink");
+          t_set.add("orange");
+     // print original list
+   System.out.println("Original tree set:" + t_set);  
+     Iterator it = t_set.descendingIterator();
+     // Print list elements in reverse order
+     System.out.println("Elements in Reverse Order:");
+     while (it.hasNext()) {
+        System.out.println(it.next());
+     }
+  }
+}
+--------------------------------------------------------------------------------
+/*5.Write a Java program to find the numbers less than 7 in a tree set.
+--->>import java.util.TreeSet;
+import java.util.Iterator;
+
+  public class Exercise9 {
+  public static void main(String[] args) {
+ // creating TreeSet 
+   TreeSet <Integer>tree_num = new TreeSet<Integer>();
+   TreeSet <Integer>treeheadset = new TreeSet<Integer>();
+     
+   // Add numbers in the tree
+   tree_num.add(1);
+   tree_num.add(2);
+   tree_num.add(3);
+   tree_num.add(5);
+   tree_num.add(6);
+   tree_num.add(7);
+   tree_num.add(8);
+   tree_num.add(9);
+   tree_num.add(10);
+     
+   // Find numbers less than 7
+ treeheadset = (TreeSet)tree_num.headSet(7);  
+
+   // create an iterator
+   Iterator iterator;
+   iterator = treeheadset.iterator();
+     
+   //Displaying the tree set data
+   System.out.println("Tree set data: ");     
+   while (iterator.hasNext()){
+   System.out.println(iterator.next() + " ");
+   }
+   }    
+}
+------------------------------------------------------------------------------
+//////////************HASHMAP************/////////////
+/*1.Write a Java program to associate the specified value with the specified key in a HashMap.
+import java.util.TreeSet;
+import java.util.Iterator;
+
+  public class Exercise9 {
+  public static void main(String[] args) {
+ // creating TreeSet 
+   TreeSet <Integer>tree_num = new TreeSet<Integer>();
+   TreeSet <Integer>treeheadset = new TreeSet<Integer>();
+     
+   // Add numbers in the tree
+   tree_num.add(1);
+   tree_num.add(2);
+   tree_num.add(3);
+   tree_num.add(5);
+   tree_num.add(6);
+   tree_num.add(7);
+   tree_num.add(8);
+   tree_num.add(9);
+   tree_num.add(10);
+     
+   // Find numbers less than 7
+ treeheadset = (TreeSet)tree_num.headSet(7);  
+
+   // create an iterator
+   Iterator iterator;
+   iterator = treeheadset.iterator();
+     
+   //Displaying the tree set data
+   System.out.println("Tree set data: ");     
+   while (iterator.hasNext()){
+   System.out.println(iterator.next() + " ");
+   }
+   }    
+}
+---------------------------------------------------------------------------------
+/*2.Write a Java program to count the number of key-value (size) mappings in a map.
+import java.util.TreeSet;
+import java.util.Iterator;
+
+  public class Exercise9 {
+  public static void main(String[] args) {
+ // creating TreeSet 
+   TreeSet <Integer>tree_num = new TreeSet<Integer>();
+   TreeSet <Integer>treeheadset = new TreeSet<Integer>();
+     
+   // Add numbers in the tree
+   tree_num.add(1);
+   tree_num.add(2);
+   tree_num.add(3);
+   tree_num.add(5);
+   tree_num.add(6);
+   tree_num.add(7);
+   tree_num.add(8);
+   tree_num.add(9);
+   tree_num.add(10);
+     
+   // Find numbers less than 7
+ treeheadset = (TreeSet)tree_num.headSet(7);  
+
+   // create an iterator
+   Iterator iterator;
+   iterator = treeheadset.iterator();
+     
+   //Displaying the tree set data
+   System.out.println("Tree set data: ");     
+   while (iterator.hasNext()){
+   System.out.println(iterator.next() + " ");
+   }
+   }    
+}
+-----------------------------------------------------------------------------
+/*3.Write a Java program to copy all of the mappings from the specified map to another map.
+--->>import java.util.*;  
+public class Example3 {  
+   public static void main(String args[]) {
+  // create two hash maps
+  HashMap <Integer,String> hash_map1 = new HashMap <Integer,String> ();
+  HashMap <Integer,String> hash_map2 = new HashMap <Integer,String> ();
+  // populate hash maps
+  hash_map1.put(1, "Red");
+  hash_map1.put(2, "Green");
+  hash_map1.put(3, "Black");
+  System.out.println("\nValues in first map: " + hash_map1);
+  hash_map2.put(4, "White");
+  hash_map2.put(5, "Blue");
+  hash_map2.put(6, "Orange");
+  System.out.println("\nValues in second map: " + hash_map2);
+
+  // put all values in secondmap
+  hash_map2.putAll(hash_map1);
+  System.out.println("\nNow values in second map: " + hash_map2);
+ }
+}
+-------------------------------------------------------------------------------
+/*4.Write a Java program to remove all the mappings from a map.
+--->>import java.util.*;  
+public class Example4 {  
+   public static void main(String args[]) {
+  HashMap <Integer,String> hash_map = new HashMap <Integer,String> ();
+  hash_map.put(1, "Red");
+  hash_map.put(2, "Green");
+  hash_map.put(3, "Black");
+  hash_map.put(4, "White");
+  hash_map.put(5, "Blue");
+  // print the map
+  System.out.println("The Original linked map: " + hash_map);
+  // Removing all the elements from the linked map
+  hash_map.clear();
+  System.out.println("The New map: " + hash_map);
+ }
+}
+-------------------------------------------------------------------------------
+/*5.Write a Java program to test if a map contains a mapping for the specified key.
+--->>import java.util.*;  
+public class Example7 {  
+   public static void main(String args[]) {
+  HashMap < String, Integer > hash_map = new HashMap < String, Integer > ();
+  hash_map.put("Red", 1);
+  hash_map.put("Green", 2);
+  hash_map.put("Black", 3);
+  hash_map.put("White", 4);
+  hash_map.put("Blue", 5);
+  // print the map
+  System.out.println("The Original map: " + hash_map);
+  System.out.println("1. Is key 'Green' exists?");
+  if (hash_map.containsKey("Green")) {
+   //key exists
+   System.out.println("yes! - " + hash_map.get("Green"));
+  } else {
+   //key does not exists
+   System.out.println("no!");
+  }
+
+  System.out.println("\n2. Is key 'orange' exists?");
+  if (hash_map.containsKey("orange")) {
+   System.out.println("yes! - " + hash_map.get("orange"));
+  } else {
+   System.out.println("no!");
+  }
+ }
+}
+--------------------------------------------------------------------------------
+/*6.Write a Java program to test if a map contains a mapping for the specified value.
+--->>import java.util.*;  
+public class Example8 {  
+   public static void main(String args[]) {
+  HashMap < Integer, String > hash_map = new HashMap < Integer, String > ();
+  hash_map.put(1, "Red");
+  hash_map.put(2, "Green");
+  hash_map.put(3, "Black");
+  hash_map.put(4, "White");
+  hash_map.put(5, "Blue");
+  // print the map
+  System.out.println("The Original map: " + hash_map);
+  System.out.println("1. Is value \'Green\' exists?");
+  if (hash_map.containsValue("Green")) {
+   //value exists
+   System.out.println("Yes! ");
+  } else {
+   //value does not exists
+   System.out.println("no!");
+  }
+
+  System.out.println("\n2. Is value \'orange\' exists?");
+  if (hash_map.containsValue("orange")) {
+   System.out.println("yes! - " );
+  } else {
+   System.out.println("No!");
+  }
+ }
+}
+-----------------------------------------------------------------------------
+/////////////////***********Inheritance Assignments*********//////////
+/*1.Q1.Create two classes named Mammals and MarineAnimals. Create another class named BlueWhale which 
+inherits both the above classes. Now, create a function in each of these classes which prints "I am mammal", 
+"I am a marine animal" and "I belong to both the categories: Mammals as well as Marine Animals" respectively. Now, 
+create an object for each of the above class and try calling
+1 - function of Mammals by the object of Mammal
+2 - function of MarineAnimal by the object of MarineAnimal
+3 - function of BlueWhale by the object of BlueWhale
+4 - function of each of its parent by the object of BlueWhale
+--->>
+
+------------------------------------------------------------------------------
+/*2.
+--->>
+
+
+
+
+-------------------------------------------------------------------------------
+/*3.We want to calculate the total marks of each student of a class in Physics,Chemistry and Mathematics and the average
+marks of the class. The number of students in the class are entered by the user. Create a class named Marks with data members 
+for roll number, name and marks. Create three other classes inheriting the Marks class, namely Physics, Chemistry and Mathematics, 
+which are used to define marks in individual subject of each student. Roll number of each student will be generated automatically.
+--->>import java.util.Scanner;
+
+public class Student
+{
+    private String name;
+    private int eng;
+    private int hn;
+    private int mts;
+    private double total;
+    private double avg;
+    
+    public void accept() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter student name: ");
+        name = in.nextLine();
+        System.out.print("Enter marks in English: ");
+        eng = in.nextInt();
+        System.out.print("Enter marks in Hindi: ");
+        hn = in.nextInt();
+        System.out.print("Enter marks in Maths: ");
+        mts = in.nextInt();
+    }
+    
+    public void compute() {
+        total = eng + hn + mts;
+        avg = total / 3.0;
+    }
+    
+    public void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Marks in English: " + eng);
+        System.out.println("Marks in Hindi: " + hn);
+        System.out.println("Marks in Maths: " + mts);
+        System.out.println("Total Marks: " + total);
+        System.out.println("Average Marks: " + avg);
+    }
+    
+    public static void main(String args[]) {
+        Student obj = new Student();
+        obj.accept();
+        obj.compute();
+        obj.display();
+    }
+}
+-----------------------------------------------------------------------------
+/*4.We want to store the information of different vehicles. Create a class named Vehicle with two data 
+member named mileage and price. Create its two subclasses
+*Car with data members to store ownership cost, warranty (by years), seating capacity and fuel type (diesel or petrol).
+*Bike with data members to store the number of cylinders, number of gears, cooling type(air, liquid or oil), wheel 
+type(alloys or spokes) and fuel tank size(in inches)
+Make another two subclasses Audi and Ford of Car, each having a data member to store the model type. Next, make two 
+subclasses Bajaj and TVS, each having a data member to store the make-type.
+Now, store and print the information of an Audi and a Ford car (i.e. model type, ownership cost, warranty, seating 
+capacity, fuel type, mileage and price.) Do the same for a Bajaj and a TVS bike.
+--->>
+
+
+-------------------------------------------------------------------------------
+/*5.Create a class named Shape with a function that prints "This is a shape". Create another class named Polygon inheriting the 
+Shape class with the same function that prints "Polygon is a shape". Create two other classes named Rectangle and Triangle having 
+the same function which prints "Rectangle is a polygon" and "Triangle is a polygon" respectively. Again, make another class named 
+Square having the same function which prints "Square is a rectangle".
+Now, try calling the function by the object of each of these classes.
+--->>
+
+---------------------------------------------------------------------------------
+/*6.All the banks operating in India are controlled by RBI. RBI has set a well defined guideline (e.g. minimum interest rate, minimum 
+balance allowed, maximum withdrawal limit etc) which all banks must follow. For example, suppose RBI has set minimum interest rate applicable 
+to a saving bank account to be 4% annually; however, banks are free to use 4% interest rate or to set any rates above it.
+--->>import java.util.Scanner;
+
+   class Customer{
+       String name,address;
+       int age;
+   }
+  
+   class Account{
+       String accType,branchType;
+   }
+  
+   class RBI{ // Base class
+       int withLimit,n;
+       double A,P,r;
+       float t;
+       long avg,tot,mb;
+      
+       int setWithdrawalLimit() {
+           Scanner inp = new Scanner(System.in);
+           String actype=inp.nextLine();
+           String brtype=inp.nextLine();
+           if(actype=="SAVINGS" && brtype=="METRO") {
+               withLimit = 5000;
+           }else {
+               withLimit = 4000;
+           }
+       return withLimit;
+       }
+      
+       double setInterestRate() {
+           A=(P+r)/n*t;
+           return A;
+       }
+      
+       long setMAB() {
+           mb=(avg*tot)/31;
+           return mb;
+       }
+   }
+  
+   class SBI extends RBI{ // Child class1
+       double setInterestRate() {
+           A=P*(1+r/n)+n*t;
+           return A;
+       }
+       long setMAB() {
+           mb=(avg+tot)/30;
+           return mb;
+       }
+   }
+  
+   class ICICI extends RBI{ // Child class2
+       double setInterestRate() {
+           A=(P*r)/n+t;
+           return A;
+       }
+      
+       int setWithdrawalLimit() {
+           withLimit=7000;
+           return withLimit;
+       }
+   }
+
+public class InhTest { //Tester code
+public static void main(String args[]) {
+SBI sbi = new SBI();
+ICICI icici = new ICICI();
+sbi.P=10.433;
+sbi.r=7.42;
+sbi.n=5;
+sbi.t=7;
+Double sbiInt=sbi.setInterestRate();
+System.out.println("SBI interest rate is:"+sbiInt);
+int iciciWL= icici.setWithdrawalLimit();
+System.out.println("ICICI withdraw limit is:"+iciciWL);
+}
+}
+-----------------------------------------------------------------------------------
+/*7.Write a program to implement bank functionality in the above scenario. Note: Create few classes namely Customer, Account, RBI (Base Class) 
+and few derived classes (SBI, ICICI, PNB etc). Assume and implement required member variables and functions in each class.
+Hint:
+Class Customer
+{
+//Personal Details ...
+// Few functions ...
+}
+Class Account
+{
+// Account Detail ...
+// Few functions ...
+} 
+Class RBI
+{
+Customer c; //hasA relationship
+Account a;	//hasA relationship
+..
+Public double GetInterestRate() {	}
+Public double GetWithdrawalLimit() {	}
+}
+Class SBI: public RBI
+{
+//Use RBI functionality or define own functionality.
+} 
+Class ICICI: public RBI
+{
+//Use RBI functionality or define own functionality.
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
